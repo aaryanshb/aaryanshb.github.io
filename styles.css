@@ -40,8 +40,10 @@ h3 {
     font-weight: 600;
 }
 
-.hero-image {
-    display: flex;
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
 }
 
 .hero-text {
