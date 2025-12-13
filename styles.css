@@ -83,8 +83,8 @@ h3 {
     flex-direction: column;
     font-size: clamp(2rem, 2.5vw, 24px);
     max-width: 36ch;
-    gap: 6rem;
-    outline: 2px solid red;
+    gap: 7rem;
+    /*outline: 2px solid red;*/
 }
 
 .hero-heading h1 {
@@ -93,38 +93,40 @@ h3 {
     font-weight: 400;
     white-space: nowrap;
 
-    outline: 2px solid blue;
+    /*outline: 2px solid blue;*/
 }
 
 .hero-about p {
     font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
 
-    outline: 2px solid blue;
+    /*outline: 2px solid blue;*/
 }
 
 .hero-actions {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 .btn {
-    gap: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    /* vertical centering */
+    justify-content: center;
+    gap: 0.75rem;
     /* space between icon & text */
     background: black;
     color: whitesmoke;
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    min-width: 150px;
-    font-size: 2rem;
+    border-radius: 20px;
+    width: 120px;
+    font-size: 1.5rem;
     font-weight: 400;
     text-decoration: none;
     cursor: pointer;
 }
-
-
 
 
 
