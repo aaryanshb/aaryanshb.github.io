@@ -339,7 +339,7 @@ h2 {
 .project-card {
     background: var(--bg);
     border: 2px solid var(--text);
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border-radius: 20px;
 
     width: clamp(250px, 50vw, 500px);
@@ -397,7 +397,7 @@ h2 {
     border: 2px solid var(--text);
     border-radius: 20px;
 
-    width: clamp(8rem, 12vw, 12rem);
+    width: clamp(10rem, 12vw, 12rem);
     font-size: 16px;
     font-weight: 500;
     line-height: 1;
@@ -455,4 +455,147 @@ h2 {
     text-decoration: none;
 
     color: var(--bg);
+}
+
+
+/* =========================================================
+   MOBILE/TABLET OPTIMIZATION
+   ========================================================= */
+
+/* Small phones */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.75rem 1.25rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .hero {
+        min-height: 100dvh;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1.25rem;
+        gap: 2rem;
+    }
+
+    .hero-info {
+        max-width: 100%;
+        font-size: 18px;
+        gap: 2rem;
+    }
+
+    .hero-heading h1 {
+        white-space: normal;
+    }
+
+    .hero-actions {
+        width: 100%;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .hero .btn {
+        width: auto;
+        flex: 1 1 140px;
+        padding: 0.75rem 1rem;
+        font-size: 1.4rem;
+        border-radius: 16px;
+        text-align: center;
+
+    }
+
+    .hero .btn span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .hero .btn svg {
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        display: block;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        border-radius: 16px;
+    }
+
+    .projects {
+        padding: 3rem 1.25rem;
+    }
+
+    .projects-grid {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 520px;
+        aspect-ratio: auto;
+    }
+
+    .project-card img {
+        height: auto;
+    }
+
+    .project-card .btn {
+        width: auto;
+        padding: 0.75rem 1rem;
+        border-radius: 16px;
+    }
+
+    .site-footer {
+        padding: 1rem 1.25rem;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+}
+
+/* Tablets / small laptops */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        padding: 3rem 2rem;
+    }
+
+    .hero-info {
+        max-width: 100%;
+    }
+
+    .hero-heading h1 {
+        white-space: normal;
+    }
+
+    .hero-actions {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .projects-grid {
+        justify-content: center;
+    }
+
+    .project-card {
+        width: min(520px, 100%);
+        aspect-ratio: auto;
+    }
 }
