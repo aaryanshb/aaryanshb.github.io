@@ -169,7 +169,7 @@ h3 {
 }
 
 .hero {
-    min-height: 100dvh;
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -233,9 +233,9 @@ h3 {
     color: var(--text);
     padding: 0.75rem 1.5rem;
     border-radius: 20px;
-    width: clamp(8rem, 12vw, 12rem);
+    width: clamp(60px, 120px, 120px);
     min-height: auto;
-    font-size: clamp(0.875rem, 1.25vw, 1.5rem);
+    font-size: clamp(0.75rem, 1.5rem, 1.5rem);
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -298,24 +298,7 @@ h3 {
 h2 {
     min-height: 30px;
 
-    display: flex;
-    justify-content: center;
-
-    line-height: 1.05;
     font-weight: 400;
-    font-size: clamp(16px, 4vw, 32px);
+    font-size: larger;
     font-family: "Radley", "Times New Roman", serif;
-
-    padding: 20px 20px;
-}
-
-#projects * {
-    /*outline: 2px solid red;*/
-}
-
-.projects-grid {
-    display: flex;
-    justify-content: space-evenly;
-
-    outline: 2px solid yellow;
 }

@@ -23,8 +23,8 @@
 /* Dark mode (toggle) */
 [data-theme="dark"] {
     /* base colors */
-    --text: #d9fae9;
-    --ui-1: #0BD8B6;
+    --text: #B6ECF7;
+    --ui-1: #12A594;
     --ui-2: #145750;
     --bg: #111C1B;
 
@@ -33,7 +33,7 @@
     --overlay-2: rgba(182, 236, 247, 0.10);
     --overlay-3: rgba(182, 236, 247, 0.16);
 
-    --shadow: rgba(255, 255, 255, 0.30);
+    --shadow: rgba(255, 255, 255, 0.10);
 }
 
 /* Fonts */
@@ -169,12 +169,14 @@ h3 {
 }
 
 .hero {
-    min-height: 100dvh;
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
     gap: clamp(1.5rem, 5vw, 7rem);
+
+    outline: 2px solid var(--text);
 
 }
 
@@ -233,9 +235,9 @@ h3 {
     color: var(--text);
     padding: 0.75rem 1.5rem;
     border-radius: 20px;
-    width: clamp(8rem, 12vw, 12rem);
+    width: clamp(60px, 120px, 120px);
     min-height: auto;
-    font-size: clamp(0.875rem, 1.25vw, 1.5rem);
+    font-size: clamp(0.75rem, 1.5rem, 1.5rem);
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -251,7 +253,7 @@ h3 {
     transform: translateY(-1px);
     background: var(--text);
     color: var(--bg);
-    box-shadow: 0 6px 20px var(--shadow);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.50);
 }
 
 .hero .btn:active {
@@ -294,28 +296,3 @@ h3 {
    END OF HERO / THUMBNAIL — LOCKED
    Do not modify above unless broken
    ========================================================= */
-
-h2 {
-    min-height: 30px;
-
-    display: flex;
-    justify-content: center;
-
-    line-height: 1.05;
-    font-weight: 400;
-    font-size: clamp(16px, 4vw, 32px);
-    font-family: "Radley", "Times New Roman", serif;
-
-    padding: 20px 20px;
-}
-
-#projects * {
-    /*outline: 2px solid red;*/
-}
-
-.projects-grid {
-    display: flex;
-    justify-content: space-evenly;
-
-    outline: 2px solid yellow;
-}

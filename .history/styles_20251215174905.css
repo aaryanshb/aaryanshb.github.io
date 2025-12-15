@@ -169,12 +169,13 @@ h3 {
 }
 
 .hero {
-    min-height: 100dvh;
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: clamp(1.5rem, 5vw, 7rem);
+    /*outline: 2px solid red;
 
 }
 
@@ -303,10 +304,8 @@ h2 {
 
     line-height: 1.05;
     font-weight: 400;
-    font-size: clamp(16px, 4vw, 32px);
+    font-size: clamp(8, 5vw, 32px);
     font-family: "Radley", "Times New Roman", serif;
-
-    padding: 20px 20px;
 }
 
 #projects * {

@@ -34,7 +34,7 @@
 
         </nav>
 
-        <div class="hero">
+        <div id="hero">
 
             <div class="hero-info">
                 <div class="hero-heading">
@@ -92,54 +92,30 @@
     </header>
 
     <section id="projects" class="projects">
-        <h2>Project Gallery</h2>
+  <h2>Projects</h2>
 
-        <div class="projects-grid">
-            <article class="project-card">
-                <h3>Project Title</h3>
-                <p>
-                    One-sentence description of what this project does.
-                </p>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    View on GitHub
-                </a>
-            </article>
+  <div class="projects-grid">
+    <article class="project-card">
+      <h3>Project Title</h3>
+      <p>
+        One-sentence description of what this project does.
+      </p>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        View on GitHub
+      </a>
+    </article>
 
-            <article class="project-card">
-                <h3>Project Title</h3>
-                <p>
-                    One-sentence description of what this project does.
-                </p>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    View on GitHub
-                </a>
-            </article>
-        </div>
-    </section>
-
-    <script>
-
-        // Dark Mode Logic:
-        const root = document.documentElement; // <html>
-        const btn = document.querySelector(".theme-toggle");
-
-        // Load saved theme (if any)
-        const saved = localStorage.getItem("theme");
-        if (saved === "dark") root.setAttribute("data-theme", "dark");
-
-        btn.addEventListener("click", () => {
-            const isDark = root.getAttribute("data-theme") === "dark";
-
-            if (isDark) {
-                root.removeAttribute("data-theme");
-                localStorage.setItem("theme", "light");
-            } else {
-                root.setAttribute("data-theme", "dark");
-                localStorage.setItem("theme", "dark");
-            }
-        });
-
-    </script>
+    <article class="project-card">
+      <h3>Project Title</h3>
+      <p>
+        One-sentence description of what this project does.
+      </p>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        View on GitHub
+      </a>
+    </article>
+  </div>
+</section>
 
 </body>
 

@@ -92,7 +92,7 @@
     </header>
 
     <section id="projects" class="projects">
-        <h2>Project Gallery</h2>
+        <h2>Projects</h2>
 
         <div class="projects-grid">
             <article class="project-card">
@@ -116,30 +116,6 @@
             </article>
         </div>
     </section>
-
-    <script>
-
-        // Dark Mode Logic:
-        const root = document.documentElement; // <html>
-        const btn = document.querySelector(".theme-toggle");
-
-        // Load saved theme (if any)
-        const saved = localStorage.getItem("theme");
-        if (saved === "dark") root.setAttribute("data-theme", "dark");
-
-        btn.addEventListener("click", () => {
-            const isDark = root.getAttribute("data-theme") === "dark";
-
-            if (isDark) {
-                root.removeAttribute("data-theme");
-                localStorage.setItem("theme", "light");
-            } else {
-                root.setAttribute("data-theme", "dark");
-                localStorage.setItem("theme", "dark");
-            }
-        });
-
-    </script>
 
 </body>
 

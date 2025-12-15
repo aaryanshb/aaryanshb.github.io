@@ -169,7 +169,7 @@ h3 {
 }
 
 .hero {
-    min-height: 100dvh;
+    min-height: 100svh;
 
     display: flex;
     justify-content: center;
@@ -294,20 +294,6 @@ h3 {
    END OF HERO / THUMBNAIL — LOCKED
    Do not modify above unless broken
    ========================================================= */
-
-h2 {
-    min-height: 30px;
-
-    display: flex;
-    justify-content: center;
-
-    line-height: 1.05;
-    font-weight: 400;
-    font-size: clamp(16px, 4vw, 32px);
-    font-family: "Radley", "Times New Roman", serif;
-
-    padding: 20px 20px;
-}
 
 #projects * {
     /*outline: 2px solid red;*/
