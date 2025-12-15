@@ -187,6 +187,8 @@ h3 {
     max-width: 36ch;
     gap: clamp(1.5rem, 7vw, 7rem);
 
+    margin-left: 2rem;
+
     /*outline: 2px solid red;*/
 }
 
@@ -278,6 +280,8 @@ h3 {
     border-radius: 20px;
     overflow: hidden;
 
+    margin-right: 2rem;
+
     transition:
         background-color 200ms ease,
         color 200ms ease,
@@ -342,7 +346,7 @@ h2 {
     padding: 1.5rem 2rem;
     border-radius: 20px;
 
-    width: clamp(250px, 50vw, 500px);
+    width: 500px;
     aspect-ratio: 3/2;
     margin-bottom: 3rem;
 
@@ -463,7 +467,7 @@ h2 {
    ========================================================= */
 
 /* Small phones */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .navbar {
         padding: 0.75rem 1.25rem;
         gap: 1rem;
@@ -571,7 +575,7 @@ h2 {
 }
 
 /* Tablets / small laptops */
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     .hero {
         flex-direction: column;
         padding: 3rem 2rem;
@@ -599,7 +603,6 @@ h2 {
 
     .hero-image {
         flex: 0 1 400px;
-        /* grow=0, shrink=1, basis=320px */
         max-width: 500px;
         width: 100%;
 
