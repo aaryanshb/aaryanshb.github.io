@@ -303,7 +303,7 @@ h2 {
 
     line-height: 1.05;
     font-weight: 400;
-    font-size: 32px;
+    font-size: clamp(16px, 4vw, 32px);
     font-family: "Radley", "Times New Roman", serif;
 
 }
@@ -325,7 +325,6 @@ h2 {
 .projects-grid {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 
@@ -339,16 +338,16 @@ h2 {
 
     width: clamp(250px, 50vw, 500px);
     aspect-ratio: 3/2;
-    margin-bottom: 3rem;
-
 }
 
 .section-subheading {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     font-weight: 400;
     font-size: 16px;
     font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
 
+    opacity: 0.9;
     text-align: center;
 }
 
