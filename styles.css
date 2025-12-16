@@ -23,7 +23,7 @@
 /* Dark mode (toggle) */
 [data-theme="dark"] {
     /* base colors */
-    --text: #d5faef;
+    --text: #FAFEFD;
     --ui-1: #0BD8B6;
     --ui-2: #145750;
     --bg: #111C1B;
