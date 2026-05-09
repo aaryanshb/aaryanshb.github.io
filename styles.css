@@ -208,10 +208,9 @@ h3 {
 }
 
 .hero-about p {
-    font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Radley", "Times New Roman", serif;
+    font-size: clamp(1rem, 1.8vw, 20px);
     line-height: 1.6;
-
-    /*outline: 2px solid blue;*/
 }
 
 .hero-actions {
