@@ -543,6 +543,18 @@ h2 {
 }
 
 /* =========================================================
+   PROJECT CARD ACCORDION
+   ========================================================= */
+
+.card-toggle {
+    display: none;
+}
+
+.card-expandable {
+    display: contents;
+}
+
+/* =========================================================
    CERTIFICATIONS
    ========================================================= */
 
@@ -828,6 +840,62 @@ h2 {
         flex-direction: column;
         gap: 0.75rem;
         align-items: flex-start;
+    }
+
+    .hero-heading h1 {
+        font-size: clamp(1.6rem, 7vw, 2rem);
+    }
+
+    .hero-about p {
+        font-size: clamp(1rem, 4.5vw, 1.15rem);
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-links .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: none;
+        border: 1px solid var(--overlay-3);
+        border-radius: 10px;
+        padding: 0.45rem 0.9rem;
+        font-size: 13px;
+        font-family: "Roboto", "Segoe UI", sans-serif;
+        font-weight: 600;
+        color: var(--ui-1);
+        cursor: pointer;
+        margin-top: 0.5rem;
+        align-self: flex-start;
+        transition: background 0.15s ease;
+    }
+
+    .card-toggle svg {
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .card-toggle:hover {
+        background: var(--overlay-1);
+    }
+
+    .card-expandable {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 0.75rem;
+    }
+
+    .card-expandable.open {
+        display: flex;
     }
 }
 
