@@ -4,32 +4,30 @@
 
 /* Light mode (default) */
 :root {
-    /* base colors */
-    --text: #18181b;
-    --ui-1: #2563eb;
-    --ui-2: #dbeafe;
-    --bg: #ffffff;
+    --text:   #001233;   /* Regal Navy  — text, borders, navbar */
+    --ui-1:   #6096BA;   /* Steel Blue  — accents, tag borders  */
+    --ui-2:   #A3CEF1;   /* Icy Blue    — button/tag fills      */
+    --bg:     #E7ECEF;   /* Platinum    — page background       */
+    --muted:  #5B7FA6;   /* Blue-Grey   — secondary/muted text  */
 
-    /* depth overlays */
-    --overlay-1: rgba(24, 24, 27, 0.04);
-    --overlay-2: rgba(24, 24, 27, 0.08);
-    --overlay-3: rgba(24, 24, 27, 0.12);
-    --shadow: rgba(0, 0, 0, 0.10);
+    --overlay-1: rgba(0, 18, 51, 0.05);
+    --overlay-2: rgba(0, 18, 51, 0.10);
+    --overlay-3: rgba(0, 18, 51, 0.15);
+    --shadow:    rgba(0, 18, 51, 0.18);
 }
 
 /* Dark mode (toggle) */
 [data-theme="dark"] {
-    /* base colors */
-    --text: #f4f4f5;
-    --ui-1: #60a5fa;
-    --ui-2: #1e3a5f;
-    --bg: #0c0c10;
+    --text:   #E7ECEF;   /* Platinum    — text in dark mode     */
+    --ui-1:   #A3CEF1;   /* Icy Blue    — accent in dark mode   */
+    --ui-2:   #1e3a58;   /* deep navy   — button/tag fills      */
+    --bg:     #0f1e2e;   /* near-black navy — page background   */
+    --muted:  #5B7FA6;   /* Grey Olive  — secondary/muted text  */
 
-    /* depth overlays */
-    --overlay-1: rgba(244, 244, 245, 0.05);
-    --overlay-2: rgba(244, 244, 245, 0.09);
-    --overlay-3: rgba(244, 244, 245, 0.14);
-    --shadow: rgba(255, 255, 255, 0.10);
+    --overlay-1: rgba(231, 236, 239, 0.05);
+    --overlay-2: rgba(231, 236, 239, 0.09);
+    --overlay-3: rgba(231, 236, 239, 0.14);
+    --shadow:    rgba(0, 0, 0, 0.35);
 }
 
 /* Fonts */
@@ -366,7 +364,7 @@ h2 {
     font-weight: 400;
     font-size: 16px;
     font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-
+    color: var(--muted);
     text-align: center;
 }
 
@@ -394,6 +392,8 @@ h2 {
 .project-card p {
     margin-bottom: 1rem;
     flex: 1;
+    color: var(--muted);
+    font-size: 14px;
 }
 
 .project-card-actions {
@@ -540,6 +540,7 @@ h2 {
     font-size: 14px;
     font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.5;
+    color: var(--muted);
 }
 
 /* =========================================================
@@ -588,6 +589,7 @@ h2 {
 .cert-name {
     font-size: 14px;
     line-height: 1.4;
+    color: var(--muted);
 }
 
 /* =========================================================
