@@ -559,13 +559,33 @@ h2 {
     font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
+.cert-groups {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.cert-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cert-group:first-child {
+    flex: 1 1 300px;
+}
+
+.cert-group:last-child {
+    flex: 1 1 320px;
+}
+
 .cert-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0.6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
 .cert-list li {
@@ -581,14 +601,23 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--ui-1);
-    min-width: 110px;
-    flex-shrink: 0;
 }
 
 .cert-name {
     font-size: 14px;
     line-height: 1.4;
     color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.cert-name:hover {
+    color: var(--ui-1);
+    text-decoration: underline;
+}
+
+.cert-name:active {
+    color: var(--text);
 }
 
 /* =========================================================
