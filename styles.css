@@ -4,30 +4,40 @@
 
 /* Light mode (default) */
 :root {
-    --text:   #001233;   /* Regal Navy  — text, borders, navbar */
-    --ui-1:   #6096BA;   /* Steel Blue  — accents, tag borders  */
-    --ui-2:   #A3CEF1;   /* Icy Blue    — button/tag fills      */
-    --bg:     #E7ECEF;   /* Platinum    — page background       */
-    --muted:  #5B7FA6;   /* Blue-Grey   — secondary/muted text  */
+    --text: #001233;
+    /* Regal Navy  — text, borders, navbar */
+    --ui-1: #6096BA;
+    /* Steel Blue  — accents, tag borders  */
+    --ui-2: #A3CEF1;
+    /* Icy Blue    — button/tag fills      */
+    --bg: #E7ECEF;
+    /* Platinum    — page background       */
+    --muted: #5B7FA6;
+    /* Blue-Grey   — secondary/muted text  */
 
     --overlay-1: rgba(0, 18, 51, 0.05);
     --overlay-2: rgba(0, 18, 51, 0.10);
     --overlay-3: rgba(0, 18, 51, 0.15);
-    --shadow:    rgba(0, 18, 51, 0.18);
+    --shadow: rgba(0, 18, 51, 0.25);
 }
 
 /* Dark mode (toggle) */
 [data-theme="dark"] {
-    --text:   #E7ECEF;   /* Platinum    — text in dark mode     */
-    --ui-1:   #A3CEF1;   /* Icy Blue    — accent in dark mode   */
-    --ui-2:   #1e3a58;   /* deep navy   — button/tag fills      */
-    --bg:     #0f1e2e;   /* near-black navy — page background   */
-    --muted:  #5B7FA6;   /* Grey Olive  — secondary/muted text  */
+    --text: #E7ECEF;
+    /* Platinum    — text in dark mode     */
+    --ui-1: #A3CEF1;
+    /* Icy Blue    — accent in dark mode   */
+    --ui-2: #1e3a58;
+    /* deep navy   — button/tag fills      */
+    --bg: #0f1e2e;
+    /* near-black navy — page background   */
+    --muted: #5B7FA6;
+    /* Grey Olive  — secondary/muted text  */
 
     --overlay-1: rgba(231, 236, 239, 0.05);
     --overlay-2: rgba(231, 236, 239, 0.09);
     --overlay-3: rgba(231, 236, 239, 0.14);
-    --shadow:    rgba(0, 0, 0, 0.35);
+    --shadow: rgba(130, 183, 237, 0.13);
 }
 
 /* Fonts */
@@ -503,7 +513,7 @@ h2 {
     flex: 1 1 320px;
 }
 
-.about-skills > h3 {
+.about-skills>h3 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -564,7 +574,7 @@ h2 {
     border-top: 1px solid var(--overlay-3);
 }
 
-.about-certs > h3 {
+.about-certs>h3 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 1.25rem;
@@ -687,7 +697,7 @@ h2 {
     transform: translateY(-1px);
     background: var(--text);
     color: var(--bg);
-    box-shadow: 0 6px 20px var(--shadow);
+    box-shadow: 0 6px 20px var(--shadow-hover);
 }
 
 /* =========================================================
