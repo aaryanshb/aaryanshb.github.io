@@ -69,7 +69,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <!-- <li><a href="#contact" class="nav-cta">Contact</a></li> -->
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
                 <li><a href="https://www.linkedin.com/in/aaryanshb" target="_blank"
                         rel="noopener noreferrer">LinkedIn</a></li>
                 <li><button class="theme-toggle" aria-label="Toggle theme">
@@ -103,7 +103,6 @@
 
                 <div class="hero-actions">
 
-                    <!--
                     <a href="#contact" class="btn contact-me">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75"
@@ -114,7 +113,6 @@
                             CONTACT
                         </span>
                     </a>
-                    -->
                     <a href="#projects" class="btn view-projects">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75"
@@ -532,25 +530,44 @@
         </div>
     </section>
 
+
     <section id="contact" class="contact">
-        <!--
         <h2>Get In Touch</h2>
         <p class="contact-intro">
             I'm open to internship opportunities in analytics, operations research, and
-            data-driven engineering. Feel free to reach out via email or LinkedIn.
+            data-driven engineering. Feel free to reach out — I'll get back to you within a day or two.
         </p>
-        -->
-        <div class="contact-links">
-            <!--
-            <a href="mailto:aaryan6104@gmail.com" class="btn">
+
+        <form id="contact-form" class="contact-form" novalidate>
+            <input type="hidden" name="access_key" value="3bb13c8c-9c48-430e-8bb5-17cb71ad2265">
+            <input type="hidden" name="subject" value="New message from aaryanshb.github.io">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form-group">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn" id="cf-submit">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75"
-                    stroke="currentColor" width="20" height="20">
+                    stroke="currentColor" width="18" height="18">
                     <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                        d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
                 </svg>
-                Email Me
-            </a>
-            -->
+                Send Message
+            </button>
+            <p id="cf-result" class="cf-result" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-links">
             <a href="https://www.linkedin.com/in/aaryanshb" class="btn" target="_blank" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                     <path
@@ -629,6 +646,46 @@
             });
         });
 
+    </script>
+
+    <script>
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const btn = document.getElementById('cf-submit');
+                const result = document.getElementById('cf-result');
+                const originalHTML = btn.innerHTML;
+
+                btn.disabled = true;
+                btn.innerHTML = 'Sending…';
+                result.textContent = '';
+                result.className = 'cf-result';
+
+                try {
+                    const res = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: new FormData(contactForm)
+                    });
+                    const data = await res.json();
+
+                    if (data.success) {
+                        result.textContent = "Message sent! I'll get back to you soon.";
+                        result.className = 'cf-result cf-success';
+                        contactForm.reset();
+                    } else {
+                        result.textContent = 'Something went wrong. Please try again or email me directly.';
+                        result.className = 'cf-result cf-error';
+                    }
+                } catch {
+                    result.textContent = 'Network error. Please try again.';
+                    result.className = 'cf-result cf-error';
+                }
+
+                btn.disabled = false;
+                btn.innerHTML = originalHTML;
+            });
+        }
     </script>
 
 </body>

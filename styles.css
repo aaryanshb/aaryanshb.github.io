@@ -665,6 +665,85 @@ h2 {
     line-height: 1.7;
 }
 
+.contact-form {
+    max-width: 540px;
+    margin: 0 auto 3rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border: 2px solid var(--text);
+    border-radius: 12px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    outline: none;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--ui-1);
+    opacity: 0.8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--ui-1);
+    box-shadow: 0 0 0 3px rgba(96, 150, 186, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#cf-submit {
+    align-self: flex-start;
+}
+
+.cf-result {
+    font-size: 14px;
+    min-height: 1.2em;
+    margin: 0;
+}
+
+.cf-success {
+    color: #2e7d32;
+}
+
+[data-theme="dark"] .cf-success {
+    color: #81c784;
+}
+
+.cf-error {
+    color: #c62828;
+}
+
+[data-theme="dark"] .cf-error {
+    color: #ef9a9a;
+}
+
 .contact-links {
     display: flex;
     justify-content: center;
