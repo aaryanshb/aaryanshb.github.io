@@ -702,7 +702,7 @@ h2 {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: var(--ui-1);
+    color: var(--muted);
     opacity: 0.8;
 }
 
