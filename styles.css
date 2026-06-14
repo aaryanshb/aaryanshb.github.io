@@ -29,7 +29,7 @@
     /* Icy Blue    — accent in dark mode   */
     --ui-2: #1e3a58;
     /* deep navy   — button/tag fills      */
-    --bg: #001233;
+    --bg: #000a1f;
     /* near-black navy — page background   */
     --muted: #5B7FA6;
     /* Grey Olive  — secondary/muted text  */
@@ -558,15 +558,78 @@ h2 {
 }
 
 /* =========================================================
-   PROJECT CARD ACCORDION
+   PROJECT CARD FLIP (desktop)
+   ========================================================= */
+
+.card-flip {
+    width: 100%;
+    perspective: 1000px;
+    margin-bottom: 1rem;
+}
+
+.card-flip-inner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s ease;
+}
+
+.card-flip:hover .card-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.card-flip-front {
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-flip-front img {
+    width: 100%;
+    height: 220px;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+}
+
+.card-flip-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.75rem;
+    border-radius: 12px;
+}
+
+.project-card .card-flip-back p {
+    color: var(--bg);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0;
+    flex: unset;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* =========================================================
+   PROJECT CARD ACCORDION (mobile only — see media query)
    ========================================================= */
 
 .card-toggle {
     display: none;
-}
-
-.card-expandable {
-    display: contents;
 }
 
 /* =========================================================
@@ -957,6 +1020,49 @@ h2 {
         justify-content: center;
     }
 
+    /* disable flip on mobile */
+    .card-flip {
+        aspect-ratio: 16 / 9;
+        pointer-events: none;
+    }
+
+    .card-flip-inner {
+        transform: none !important;
+        transition: none;
+    }
+
+    .card-flip-front,
+    .card-flip-back {
+        position: static;
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+        height: auto;
+    }
+
+    .card-flip-back {
+        transform: none;
+        display: none;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+
+    .card-flip-back p {
+        font-size: 13px;
+    }
+
+    .card-flip-back.open {
+        display: flex;
+    }
+
+    .card-details {
+        display: none;
+    }
+
+    .card-details.open {
+        display: flex;
+    }
+
     .card-toggle {
         display: flex;
         align-items: center;
@@ -973,6 +1079,7 @@ h2 {
         margin-top: 0.5rem;
         align-self: flex-start;
         transition: background 0.15s ease;
+        pointer-events: all;
     }
 
     .card-toggle svg {
@@ -982,17 +1089,6 @@ h2 {
 
     .card-toggle:hover {
         background: var(--overlay-1);
-    }
-
-    .card-expandable {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 0.75rem;
-    }
-
-    .card-expandable.open {
-        display: flex;
     }
 }
 
