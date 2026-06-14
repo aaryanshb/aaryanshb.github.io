@@ -18,7 +18,7 @@
     --overlay-1: rgba(0, 18, 51, 0.05);
     --overlay-2: rgba(0, 18, 51, 0.10);
     --overlay-3: rgba(0, 18, 51, 0.15);
-    --shadow: rgba(0, 18, 51, 0.25);
+    --shadow: rgba(0, 18, 51, 0.34);
 }
 
 /* Dark mode (toggle) */
@@ -37,7 +37,7 @@
     --overlay-1: rgba(231, 236, 239, 0.05);
     --overlay-2: rgba(231, 236, 239, 0.09);
     --overlay-3: rgba(231, 236, 239, 0.14);
-    --shadow: rgba(130, 183, 237, 0.13);
+    --shadow: rgba(130, 183, 237, 0.23);
 }
 
 /* Fonts */
@@ -558,81 +558,6 @@ h2 {
 }
 
 /* =========================================================
-   PROJECT CARD FLIP (desktop)
-   ========================================================= */
-
-.card-flip {
-    width: 100%;
-    perspective: 1000px;
-    margin-bottom: 1rem;
-}
-
-.card-flip-inner {
-    position: relative;
-    width: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.55s ease;
-}
-
-.card-flip:hover .card-flip-inner {
-    transform: rotateY(180deg);
-}
-
-.card-flip-front {
-    width: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.card-flip-front img {
-    width: 100%;
-    height: 220px;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-    display: block;
-}
-
-.card-flip-back {
-    position: absolute;
-    inset: 0;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    background: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.75rem;
-    border-radius: 12px;
-}
-
-.project-card .card-flip-back p {
-    color: var(--bg);
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.7;
-    text-align: center;
-    margin: 0;
-    flex: unset;
-}
-
-.card-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* =========================================================
-   PROJECT CARD ACCORDION (mobile only — see media query)
-   ========================================================= */
-
-.card-toggle {
-    display: none;
-}
-
-/* =========================================================
    CERTIFICATIONS
    ========================================================= */
 
@@ -1020,76 +945,6 @@ h2 {
         justify-content: center;
     }
 
-    /* disable flip on mobile */
-    .card-flip {
-        aspect-ratio: 16 / 9;
-        pointer-events: none;
-    }
-
-    .card-flip-inner {
-        transform: none !important;
-        transition: none;
-    }
-
-    .card-flip-front,
-    .card-flip-back {
-        position: static;
-        backface-visibility: visible;
-        -webkit-backface-visibility: visible;
-        height: auto;
-    }
-
-    .card-flip-back {
-        transform: none;
-        display: none;
-        padding: 1rem;
-        border-radius: 8px;
-        margin-top: 0.5rem;
-    }
-
-    .card-flip-back p {
-        font-size: 13px;
-    }
-
-    .card-flip-back.open {
-        display: flex;
-    }
-
-    .card-details {
-        display: none;
-    }
-
-    .card-details.open {
-        display: flex;
-    }
-
-    .card-toggle {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: none;
-        border: 1px solid var(--overlay-3);
-        border-radius: 10px;
-        padding: 0.45rem 0.9rem;
-        font-size: 13px;
-        font-family: "Roboto", "Segoe UI", sans-serif;
-        font-weight: 600;
-        color: var(--ui-1);
-        cursor: pointer;
-        margin-top: 0.5rem;
-        align-self: flex-start;
-        transition: background 0.15s ease;
-        pointer-events: all;
-    }
-
-    .card-toggle svg {
-        transition: transform 0.2s ease;
-        flex-shrink: 0;
-    }
-
-    .card-toggle:hover {
-        background: var(--overlay-1);
-    }
 }
 
 /* Tablets / small laptops */
