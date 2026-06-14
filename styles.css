@@ -18,7 +18,7 @@
     --overlay-1: rgba(0, 18, 51, 0.05);
     --overlay-2: rgba(0, 18, 51, 0.10);
     --overlay-3: rgba(0, 18, 51, 0.15);
-    --shadow: rgba(0, 18, 51, 0.34);
+    --shadow: rgba(0, 18, 51, 0.35);
 }
 
 /* Dark mode (toggle) */
@@ -37,7 +37,7 @@
     --overlay-1: rgba(231, 236, 239, 0.05);
     --overlay-2: rgba(231, 236, 239, 0.09);
     --overlay-3: rgba(231, 236, 239, 0.14);
-    --shadow: rgba(130, 183, 237, 0.23);
+    --shadow: rgba(130, 183, 237, 0.25);
 }
 
 /* Fonts */
